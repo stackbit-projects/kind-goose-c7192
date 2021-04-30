@@ -3,7 +3,7 @@ title: Home
 sections:
   - type: hero_section
     title: This Is A Big Hero Headline
-    subtitle: Optional hero section subtitle Does this change?
+    subtitle: '!Optional hero section subtitle Does this change?'
     content: >-
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl
       ligula, cursus id molestie vel.
