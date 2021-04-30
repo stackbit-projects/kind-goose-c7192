@@ -6,7 +6,7 @@ import SectionActions from './SectionActions';
 
 export default class HeroSection extends React.Component {
     render() {
-        let section2 = _.get(this.props, 'section', null);
+        let section = _.get(this.props, 'section', null);
         let padding_top = _.get(section, 'padding_top', null) || 'medium';
         let padding_bottom = _.get(section, 'padding_bottom', null) || 'medium';
         let align_x = _.get(section, 'align', null) || 'center';
