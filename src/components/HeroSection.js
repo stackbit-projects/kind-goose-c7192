@@ -59,7 +59,7 @@ const _observe = (obj) => {
 
   return obj;
 }
-        console.log(section.)
+        console.log(section.__isProxy)
 
         return (
             <React.Fragment>
