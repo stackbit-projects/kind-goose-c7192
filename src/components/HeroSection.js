@@ -38,6 +38,29 @@ export default class HeroSection extends React.Component {
              is_vert = true;
         }
         console.log(section)
+
+In my current project I also needed a way of defining if something was already a Proxy, mainly because I didn't want to start a proxy on a proxy. For this I simply added a getter to my handler, which would return true if the requested variable was "__Proxy":
+
+function _observe(obj) {
+  if (obj.__isProxy === undefined) {
+    var ret = new Proxy(obj || {}, {
+      set: (target, key, value) => {
+        /// act on the change
+        return true;
+      },
+      get: (target, key) => {
+        if (key !== "__isProxy") {
+          return target[key];
+        }
+
+        return true;
+      }
+    });
+    return ret;
+  }
+
+  return obj;
+}
         return (
             <React.Fragment>
                 <section className={classNames('section', 'hero', {'has-border': _.get(section, 'has_border', null), 'has-cover': _.get(section, 'background_image', null), 'bg-none': bg_color === 'none', 'bg-primary': bg_color === 'primary', 'bg-secondary': bg_color === 'secondary', 'pt-4': padding_top === 'small', 'pt-6': (padding_top === 'medium') || (padding_top === 'large'), 'pt-md-7': padding_top === 'large', 'pb-4': padding_bottom === 'small', 'pb-6': (padding_bottom === 'medium') || (padding_bottom === 'large'), 'pb-md-7': padding_bottom === 'large'})}>
