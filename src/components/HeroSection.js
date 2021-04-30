@@ -45,21 +45,7 @@ const _observe = (obj) => {
       set: (target, key, value) => {
         /// act on the change
         return true;
-      },
-      get: (target, key) => {
-        if (key !== "__isProxy") {
-          return target[key];
-        }
 
-        return true;
-      }
-    });
-    return ret;
-  }
-
-  return obj;
-}
-        console.log(section.__isProxy)
 
         return (
             <React.Fragment>
