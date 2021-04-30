@@ -39,7 +39,7 @@ export default class HeroSection extends React.Component {
         }
 
 
-function _observe(obj) {
+const _observe = (obj) => {
   if (obj.__isProxy === undefined) {
     var ret = new Proxy(obj || {}, {
       set: (target, key, value) => {
