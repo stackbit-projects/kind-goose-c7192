@@ -37,7 +37,6 @@ export default class HeroSection extends React.Component {
         if (((media_pos === 'top') || (media_pos === 'bottom'))) {
              is_vert = true;
         }
-        console.log(section)
 
 
 function _observe(obj) {
