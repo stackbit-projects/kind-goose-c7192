@@ -59,7 +59,7 @@ const _observe = (obj) => {
 
   return obj;
 }
-        console.log(observe(section))
+        console.log(section.)
 
         return (
             <React.Fragment>
