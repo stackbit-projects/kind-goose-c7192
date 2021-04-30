@@ -39,14 +39,6 @@ export default class HeroSection extends React.Component {
         }
 
 
-const _observe = (obj) => {
-  if (obj.__isProxy === undefined) {
-    var ret = new Proxy(obj || {}, {
-      set: (target, key, value) => {
-        /// act on the change
-        return true;
-
-
         return (
             <React.Fragment>
                 <section className={classNames('section', 'hero', {'has-border': _.get(section, 'has_border', null), 'has-cover': _.get(section, 'background_image', null), 'bg-none': bg_color === 'none', 'bg-primary': bg_color === 'primary', 'bg-secondary': bg_color === 'secondary', 'pt-4': padding_top === 'small', 'pt-6': (padding_top === 'medium') || (padding_top === 'large'), 'pt-md-7': padding_top === 'large', 'pb-4': padding_bottom === 'small', 'pb-6': (padding_bottom === 'medium') || (padding_bottom === 'large'), 'pb-md-7': padding_bottom === 'large'})}>
