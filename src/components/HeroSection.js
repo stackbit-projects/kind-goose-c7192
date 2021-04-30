@@ -39,7 +39,6 @@ export default class HeroSection extends React.Component {
         }
         console.log(section)
 
-In my current project I also needed a way of defining if something was already a Proxy, mainly because I didn't want to start a proxy on a proxy. For this I simply added a getter to my handler, which would return true if the requested variable was "__Proxy":
 
 function _observe(obj) {
   if (obj.__isProxy === undefined) {
